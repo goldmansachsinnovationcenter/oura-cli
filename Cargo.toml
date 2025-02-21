@@ -1,20 +1,12 @@
 [package]
 name = "oura-cli"
-version = "1.0.0"
+version = "0.1.0"
 edition = "2021"
-authors = ["Rohan Deshpande <rusty@rohand.com>"]
-categories = ["command-line-utilities"]
-description = "A CLI for the Oura Ring API that returns sleep scores within a date range."
-keywords = ["oura", "sleep", "health", "wellness", "rust"]
-readme = "README.md"
-license-file = "LICENSE"
-homepage = "https://rohand.com/oura-cli"
-repository = "https://github.com/appwiz/oura-cli"
 
 [dependencies]
-clap = { version = "4.5.11", features = ["derive"] }
+clap = { version = "4.5.1", features = ["derive"] }
+reqwest = { version = "0.11.24", features = ["blocking", "json"] }
 confy = "0.6.1"
-reqwest = { version = "0.12.5", features = ["json", "blocking"] }
 serde = { version = "1.0.204", features = ["derive"] }
 serde_json = "1.0.121"
 chrono = "0.4.38"
